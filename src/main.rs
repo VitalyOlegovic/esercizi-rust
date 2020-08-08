@@ -1,3 +1,4 @@
+mod enum_display;
 mod frunk_color_semigroup;
 mod frunk_semigroup;
 mod ordinamento;
@@ -11,6 +12,6 @@ fn main() {
     let f = first_word::first_word(&s);
     println!("{}",f);*/
     //ordinamento::prova()
-    frunk_color_semigroup::prova();
+    frunk_color_semigroup::lets_make_orange();
 }
 

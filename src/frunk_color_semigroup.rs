@@ -1,9 +1,8 @@
 use frunk::Semigroup;
-use std::string::ToString;
 use core::fmt;
-use std::fmt::{Formatter, Error};
 
-#[derive(PartialEq, Eq, Copy, Clone)]
+
+#[derive(Debug, PartialEq, Eq, Copy, Clone)]
 pub enum Color {
     Red,
     Yellow,
@@ -33,25 +32,9 @@ impl Semigroup for Color {
     }
 }
 
-impl fmt::Display for Color {
-
-    fn fmt(&self, f: &mut Formatter<'_>) -> Result<(),Error> {
-        let s = match self {
-            Color::Red => String::from("Red"),
-            Color::Yellow => String::from("Yellow"),
-            Color::Blue => String::from("Blue"),
-            Color::Green => String::from("Green"),
-            Color::Purple => String::from("Purple"),
-            Color::Orange => String::from("Orange"),
-            Color::Brown => String::from("Brown")
-        };
-        write!(f, "{}", s)
-    }
-}
-
-pub fn prova() {
+pub fn lets_make_orange() {
     let red = Color::Red;
     let yellow = Color::Yellow;
     let result = red.combine(&yellow);
-    println!("{}", result.to_string())
+    println!("{:?}", result)
 }
