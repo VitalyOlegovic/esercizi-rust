@@ -1,5 +1,4 @@
 use std::io;
-use itertools::Itertools;
 use std::cmp::Ordering;
 
 macro_rules! parse_input {
