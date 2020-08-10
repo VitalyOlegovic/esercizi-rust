@@ -1,6 +1,6 @@
 use std::fmt::{Formatter, Error};
 
-pub enum Color {
+enum Color {
     Red,
     Yellow,
     Blue,
