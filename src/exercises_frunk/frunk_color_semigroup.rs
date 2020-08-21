@@ -25,8 +25,7 @@ impl Semigroup for Color {
             (Color::Yellow, Color::Red) => Color::Orange,
             (Color::Red, Color::Yellow) => Color::Orange,
             (a, b) if a==b => a.clone(),
-            (a,b) if
-            vec![a,b].iter().all(
+            (a,b) if vec![a,b].iter().all(
                 |x| red_blue_purple.contains(x)) => Color::Purple,
             (a,b) if vec![a,b].iter().all(
                 |x|blue_yellow_green.contains(x)) => Color::Green,
